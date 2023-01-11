@@ -1,0 +1,43 @@
+{
+  "name": "chilema-provider",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.2.2",
+    "pinia": "^2.0.28",
+    "store2": "^2.14.2",
+    "vant": "^4.0.6",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.30.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "unplugin-vue-components": "^0.22.12",
+    "vite": "^4.0.0",
+    "vite-plugin-style-import": "^2.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/vue3-recommended"
+    ],
+    "rules": {
+      "semi": [
+        1
+      ],
+      "quotes": [
+        1,
+        "single"
+      ]
+    }
+  }
+}
