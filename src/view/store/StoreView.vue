@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="container">
-      <van-tabs v-model:active="activeName">
+      <van-tabs
+        v-model:active="activeName"
+        class="tabs"
+      >
         <van-tab
           v-for="(item, index) in tabs"
           :key="index"
@@ -10,6 +13,9 @@
           :to="{name: item.name}"
         />
       </van-tabs>
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -39,11 +45,25 @@ const tabs = [
   }
 ];
 
-const activeName = $ref(route.matched.at(-1).name || tabs[-1].name);
+// 有些浏览器不支持at函数
+const activeName = $ref(route.matched[route.matched.length - 1].name || tabs[tabs.length - 1].name);
 </script>
 
 <style lang="less" scoped>
+@import "@/index.less";
+
 .container {
   height: 100%;
+
+  .tabs {
+    margin-bottom: 10px;
+  }
+
+  main {
+    //background-color: #FFF;
+    //height: calc(@layout-main - (@basic-view-padding-y * 2) - var(--van-tabs-line-height) - 10px);
+    box-sizing: border-box;
+  }
+
 }
 </style>

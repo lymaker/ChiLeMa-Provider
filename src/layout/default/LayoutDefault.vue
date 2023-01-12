@@ -52,12 +52,10 @@ let active = $ref(nav.findIndex(e => route.matched[1].path === e.path));
 <style lang="less" scoped>
 @import "@/index.less";
 
-@main-height: 93vh;
-
 .layout {
 
   main {
-    height: @main-height;
+    height: @layout-main;
     padding: @basic-view-padding-y @basic-view-padding-x;
     background: @basic-background-color;
     box-sizing: border-box;

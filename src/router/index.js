@@ -26,6 +26,9 @@ const routes = [
             {
                 path: 'store',
                 name: 'store',
+                redirect: {
+                    name: 'store-child'
+                },
                 component: StoreView,
                 children: [
                     {
